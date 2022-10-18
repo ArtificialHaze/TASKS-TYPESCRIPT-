@@ -1,0 +1,137 @@
+/* GLOBAL STYLE */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* MAIN STYLE */
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: salmon;
+  font-family: inherit;
+}
+
+.heading {
+  text-transform: uppercase;
+  font-size: 40px;
+  margin: 30px 0;
+  color: #fff;
+  z-index: 1;
+  text-align: center;
+}
+
+.input {
+  display: flex;
+  width: 90%;
+  position: relative;
+  align-items: center;
+}
+
+.input__box {
+  width: 100%;
+  border-radius: 40px;
+  padding: 20px 30px;
+  font-size: 25px;
+  border: none;
+  transition: 300ms;
+  box-shadow: inset 0 0 5px black;
+}
+
+.input__box:focus {
+  box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.input__submit {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 13px;
+  border-radius: 40px;
+  right: 0px;
+  border: none;
+  font-size: 15px;
+  background-color: tomato;
+  color: #fff;
+  transition: 250ms ease-in all;
+  box-shadow: 0 0 5px black;
+  transform: scale(1);
+}
+
+.input__submit:hover {
+  background-color: rgb(241, 74, 45);
+}
+
+.input__submit:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 2px black;
+}
+
+.todos {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.todos__todo {
+  display: flex;
+  width: 29.5%;
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 15px;
+  background-color: goldenrod;
+}
+
+.todos__todo--text {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+}
+
+.todos__todo--text:focus {
+  outline: none;
+}
+
+.icon {
+  margin-left: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .heading {
+    margin: 15px 0;
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 700px) {
+  .input {
+    width: 95%;
+  }
+  .todos {
+    width: 95%;
+  }
+  .todos__todo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .todos__todo {
+    width: 40%;
+  }
+}
